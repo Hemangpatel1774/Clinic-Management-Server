@@ -7,9 +7,10 @@ const Doctor = require('./models/Doctor');
 const Appointment = require('./models/Appointment');
 
 const app = express();
+app.use(cors());
+
 connectDB();
 
-app.use(cors());
 app.use(express.json());
 
 // Register API routes first
@@ -30,6 +31,8 @@ app.get("/api/allCounts", async (req, res) => {
     res.json({ totalDoctors, totalUsers, totalBookings });
   } catch (err) {
     console.error(err);
+    res.send("mongo error");
+      return
     res.status(500).json({ message: "Server error" });
   }
 });
