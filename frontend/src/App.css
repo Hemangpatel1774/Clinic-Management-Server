@@ -1,0 +1,25 @@
+
+
+.mainComponent {
+padding: 20px;
+    min-height: calc(100vh - 120px);
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    max-height: calc(100vh - 120px);
+}
+.custom-datepicker {
+  height: 40px;
+  padding: 0 14px;
+  font-size: 0.875rem;
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  min-width: 200px;
+}
+
+.custom-datepicker:focus {
+  outline: none;
+  border-color: #1976d2; /* MUI primary color */
+  box-shadow: 0 0 0 2px rgba(25, 118, 210, 0.2);
+}
